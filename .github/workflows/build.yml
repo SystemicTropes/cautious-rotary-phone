@@ -31,3 +31,4 @@ jobs:
           publish_dir: ./  # Wherever output.html ended up
           publish_branch: gh-pages
           force_orphan: true  # Optional: keeps gh-pages clean
+          #just a comment to force a rebuild 
