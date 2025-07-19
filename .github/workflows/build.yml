@@ -22,13 +22,13 @@ jobs:
 
       - name: Build Twine Project
         run: |
-          tweego -o output.html src/  # Adjust this to your actual folder structure
+          tweego -o out/output.html src/  # Adjust this to your actual folder structure
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Wherever output.html ended up
-          publish_branch: gh-pages
-          force_orphan: true  # Optional: keeps gh-pages clean
+          publish_dir: ./out  # Wherever output.html ended up
+          # publish_branch: gh-pages
+          # force_orphan: true  # Optional: keeps gh-pages clean
           #just a comment to force a rebuild 
