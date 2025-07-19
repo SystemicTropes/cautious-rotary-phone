@@ -12,7 +12,7 @@ John Smith
     "ifid": "D674C58C-DEFA-4F70-B7A2-27742230C0FC",
     "format": "SugarCube",
     "format-version": "2.28.2",
-    "start": "My Starting Passage",
+    "start": "Start",
     "tag-colors": {
         "bar": "green",
         "foo": "red",
