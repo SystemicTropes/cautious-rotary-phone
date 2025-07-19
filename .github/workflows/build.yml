@@ -1,0 +1,32 @@
+name: Build and Deploy Tweego
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Tweego
+        run: |
+          curl -L -o tweego.zip https://github.com/tmedwards/tweego/releases/latest/download/tweego.zip
+          unzip tweego.zip -d tweego-bin
+          echo "$PWD/tweego-bin" >> $GITHUB_PATH
+
+      - name: Build Twine Project
+        run: |
+          tweego -o output.html story/  # Adjust this to your actual folder structure
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # Wherever output.html ended up
+          publish_branch: gh-pages
+          force_orphan: true  # Optional: keeps gh-pages clean
