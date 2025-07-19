@@ -1,2 +1,25 @@
+:: StoryTitle
+A Named Story
+
+:: StorySubtitle
+The subtitle of this story
+
+:: StoryAuthor
+John Smith
+
+:: StoryData
+{
+    "ifid": "D674C58C-DEFA-4F70-B7A2-27742230C0FC",
+    "format": "SugarCube",
+    "format-version": "2.28.2",
+    "start": "My Starting Passage",
+    "tag-colors": {
+        "bar": "green",
+        "foo": "red",
+        "qaz": "blue"
+    },
+    "zoom": 0.25
+}
+
 :: Start
 A beginning!
