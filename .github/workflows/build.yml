@@ -22,7 +22,7 @@ jobs:
 
       - name: Build Twine Project
         run: |
-          tweego -o out/output.html src/  # Adjust this to your actual folder structure
+          tweego -o out/output.html src/index.twee  # Adjust this to your actual folder structure
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
